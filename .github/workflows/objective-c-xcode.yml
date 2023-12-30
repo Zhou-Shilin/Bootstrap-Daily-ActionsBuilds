@@ -1,6 +1,8 @@
 name: Build and Package
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
     branches: [ "main" ]
   pull_request:
@@ -24,11 +26,15 @@ jobs:
       - name: Setup Environment
         run: echo "THEOS=~/theos" >> $GITHUB_ENV
 
+      - name: Clone Repository
+        run: git clone https://github.com/RootHide/Bootstrap.git
+
       - name: Make Bootstrap Package
         run: make package
+        working-directory: Bootstrap
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: Bootstrap.tipa
-          path: ./packages/Bootstrap.tipa
+          path: ./Bootstrap/packages/Bootstrap.tipa
