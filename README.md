@@ -4,7 +4,7 @@ Daily builds for [BootStrap](https://github.com/RootHide/Bootstrap).
 (00:00 every day)
 
 
-Last build: 2024-02-19 00:51:16
+Last build: 2024-02-20 00:49:34
 
 # [Click me to download latest IPA build](https://nightly.link/Zhou-Shilin/Bootstrap-Daily-ActionsBuilds/workflows/objective-c-xcode/main/Bootstrap.tipa.zip)
 
